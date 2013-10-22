@@ -5,7 +5,7 @@ class PlayTypeError < StandardError
 end
 
 class RPSGame
-  attr_accessor :gametype, :valid_moves, :tied, :won
+  attr_accessor :gametype, :valid_moves, :tied, :won, :computer_move
 
   def initialize(gametype)
     case gametype
@@ -28,7 +28,7 @@ class RPSGame
 
 
   def computer_play
-    self.valid_moves.sample
+    self.computer_move = self.valid_moves.sample
   end
 
   def self.valid_play?(move)

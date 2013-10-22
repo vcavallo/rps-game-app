@@ -3,4 +3,7 @@
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
 <h2>You have played: <%= this_game.gametype %></h2>
 <h2>The computer has played: <%= this_game.computer_play %></h2>
-<%=  this_game.won? %>
+
+<h1><%= "You won!" if this_game.won?%><h1>
+<h1><%= "You Lost, loser!" if this_game.lost?%><h1>
+<h1><%= "Looks like a tie." if this_game.tied?%><h1>

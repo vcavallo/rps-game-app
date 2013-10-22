@@ -6,7 +6,8 @@ end
 
 class RPSGame
   attr_accessor :gametype, :valid_moves, :tied, 
-  :won, :computer_move, :random_move
+  :won, :computer_move
+  attr_reader :random_move
 
   def initialize(gametype)
     case gametype

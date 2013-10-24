@@ -1,3 +1,5 @@
+require_relative 'rps_game_result'
+
 class RPSGame
   attr_accessor :play, :computer_play
 
@@ -34,6 +36,10 @@ class RPSGame
 
   def lost?
     !won? && !tied?
+  end
+
+  def result
+    RPSGameResult.new({human_play: play, computer_play: computer_play, won: won? }).game_result
   end
 
   class PlayTypeError < Exception
